@@ -1,1 +1,1 @@
-fireflymagic
+Firefly Magic
