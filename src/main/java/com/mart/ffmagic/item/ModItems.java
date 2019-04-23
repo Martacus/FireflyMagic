@@ -10,7 +10,8 @@ import net.minecraft.item.Item;
 public class ModItems {
 
     public static Item firefly_jar, firefly_jar_forest, firefly_jar_fairy, firefly_jar_mountain, firefly_jar_demon, firefly_jar_ice, firefly_jar_void, firefly_jar_earth;
-
+    public static Item firefly_juice_forest, firefly_juice_fairy, firefly_juice_mountain, firefly_juice_demon, firefly_juice_ice, firefly_juice_void, firefly_juice_earth;
+    
     public static Item scroll_sage;
 
     public static void registerItems(TitaniumMod mod){
@@ -23,6 +24,14 @@ public class ModItems {
                 firefly_jar_ice = new ItemFireflyJar("firefly_jar_ice", EntityFirefly.FireflyType.ICE),
                 firefly_jar_void = new ItemFireflyJar("firefly_jar_void", EntityFirefly.FireflyType.VOID),
                 firefly_jar_earth = new ItemFireflyJar("firefly_jar_earth", EntityFirefly.FireflyType.EARTH),
+
+                firefly_juice_forest = new ItemBase("firefly_juice_forest", new Item.Properties().group(FireflyMagic.GROUP)),
+                firefly_juice_fairy = new ItemBase("firefly_juice_fairy", new Item.Properties().group(FireflyMagic.GROUP)),
+                firefly_juice_mountain = new ItemBase("firefly_juice_mountain", new Item.Properties().group(FireflyMagic.GROUP)),
+                firefly_juice_demon = new ItemBase("firefly_juice_demon", new Item.Properties().group(FireflyMagic.GROUP)),
+                firefly_juice_ice = new ItemBase("firefly_juice_ice", new Item.Properties().group(FireflyMagic.GROUP)),
+                firefly_juice_void = new ItemBase("firefly_juice_void", new Item.Properties().group(FireflyMagic.GROUP)),
+                firefly_juice_earth = new ItemBase("firefly_juice_earth", new Item.Properties().group(FireflyMagic.GROUP)),
 
                 scroll_sage = new ItemScrollSage("scroll_sage")
         );

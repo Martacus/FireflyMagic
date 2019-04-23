@@ -7,18 +7,19 @@ import com.hrznstudio.titanium.block.BlockTileBase;
 import com.hrznstudio.titanium.block.tile.TileActive;
 import com.hrznstudio.titanium.block.tile.inventory.PosInvHandler;
 import com.mart.ffmagic.FireflyMagic;
+import com.mart.ffmagic.recipe.ModRecipes;
+import net.minecraft.block.Block;
 import net.minecraft.block.material.Material;
 import net.minecraft.block.state.IBlockState;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemBlock;
+import net.minecraft.item.ItemStack;
 import net.minecraft.util.EnumFacing;
 import net.minecraft.util.EnumHand;
 import net.minecraft.util.math.BlockPos;
-import net.minecraft.world.IBlockReader;
-import net.minecraft.world.IWorldReader;
+import net.minecraft.world.World;
 
-import javax.annotation.Nullable;
 import java.util.Objects;
 
 public class BlockFireflyPress extends BlockTileBase<BlockFireflyPress.TileFireflyPress> {
@@ -35,20 +36,22 @@ public class BlockFireflyPress extends BlockTileBase<BlockFireflyPress.TileFiref
     }
 
     @Override
-    public boolean canConnectRedstone(IBlockState state, IBlockReader world, BlockPos pos, @Nullable EnumFacing side) {
-        return true;
-    }
-
-    @Override
-    public boolean shouldCheckWeakPower(IBlockState state, IWorldReader world, BlockPos pos, EnumFacing side) {
-        return false;
-    }
-
-    @Override
     public IFactory<TileFireflyPress> getTileEntityFactory() {
         return TileFireflyPress::new;
     }
 
+    @Override
+    public void neighborChanged(IBlockState state, World worldIn, BlockPos pos, Block blockIn, BlockPos fromPos) {
+        if (!worldIn.isRemote) {
+            if (worldIn.isBlockPowered(pos)) {
+                TileFireflyPress tileFireflyPress = (TileFireflyPress) worldIn.getTileEntity(pos);
+                tileFireflyPress.activate();
+            }
+
+        }
+    }
+
+    //TileEntity
     public static class TileFireflyPress extends TileActive {
 
         @Save
@@ -57,6 +60,14 @@ public class BlockFireflyPress extends BlockTileBase<BlockFireflyPress.TileFiref
         public TileFireflyPress() {
             super(BLOCK);
             this.addInventory(first = new PosInvHandler("press_slot", 80, 40, 1).setTile(this).setInputFilter((stack, integer) -> IItemStackQuery.ANYTHING.test(stack)));
+        }
+
+        public void activate(){
+            ItemStack in = first.getStackInSlot(0);
+            Item out = ModRecipes.getPressOutput(in.getItem());
+            if(out != null){
+                first.setStackInSlot(0, new ItemStack(out));
+            }
         }
 
         @Override

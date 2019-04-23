@@ -27,6 +27,7 @@ public class ItemFireflyJar extends ItemBase {
             firefly.getDataManager().set(EntityFirefly.TYPE, type.name());
             if(!player.abilities.isCreativeMode){
                 player.getHeldItem(hand).shrink(1);
+                player.addItemStackToInventory(new ItemStack(ModItems.firefly_jar));
             }
         }
 

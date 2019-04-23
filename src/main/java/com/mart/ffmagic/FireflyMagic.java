@@ -6,6 +6,7 @@ import com.mart.ffmagic.block.ModBlocks;
 import com.mart.ffmagic.entity.EntityFirefly;
 import com.mart.ffmagic.item.ModItems;
 import com.mart.ffmagic.particle.ParticleFirefly;
+import com.mart.ffmagic.recipe.ModRecipes;
 import net.minecraft.entity.EntityType;
 import net.minecraft.init.Blocks;
 import net.minecraft.init.Items;
@@ -36,6 +37,7 @@ public class FireflyMagic extends TitaniumMod
     public FireflyMagic() {
         ModItems.registerItems(this);
         ModBlocks.registerBlocks(this);
+        ModRecipes.addRecipes();
         ParticleRegistry.registerParticle(ParticleFirefly.class, new ResourceLocation("ffmagic:particle/particle_glow"));
     }
 

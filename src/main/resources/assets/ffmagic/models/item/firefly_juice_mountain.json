@@ -1,0 +1,6 @@
+{
+  "parent": "item/handheld",
+  "textures": {
+    "layer0": "ffmagic:item/firefly_juice_mountain"
+  }
+}
