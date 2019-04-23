@@ -6,7 +6,8 @@ public class ModBlocks {
 
     public static void registerBlocks(TitaniumMod mod){
         mod.addBlocks(
-                BlockFireflyPress.BLOCK
+                BlockFireflyPress.BLOCK,
+                BlockScrollWriter.BLOCK
         );
     }
 

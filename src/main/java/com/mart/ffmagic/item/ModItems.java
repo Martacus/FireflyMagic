@@ -4,6 +4,7 @@ import com.hrznstudio.titanium.item.ItemBase;
 import com.hrznstudio.titanium.util.TitaniumMod;
 import com.mart.ffmagic.FireflyMagic;
 import com.mart.ffmagic.entity.EntityFirefly;
+import com.mart.ffmagic.item.scrolls.ItemFireflyJuice;
 import com.mart.ffmagic.item.scrolls.ItemScrollSage;
 import net.minecraft.item.Item;
 
@@ -25,13 +26,13 @@ public class ModItems {
                 firefly_jar_void = new ItemFireflyJar("firefly_jar_void", EntityFirefly.FireflyType.VOID),
                 firefly_jar_earth = new ItemFireflyJar("firefly_jar_earth", EntityFirefly.FireflyType.EARTH),
 
-                firefly_juice_forest = new ItemBase("firefly_juice_forest", new Item.Properties().group(FireflyMagic.GROUP)),
-                firefly_juice_fairy = new ItemBase("firefly_juice_fairy", new Item.Properties().group(FireflyMagic.GROUP)),
-                firefly_juice_mountain = new ItemBase("firefly_juice_mountain", new Item.Properties().group(FireflyMagic.GROUP)),
-                firefly_juice_demon = new ItemBase("firefly_juice_demon", new Item.Properties().group(FireflyMagic.GROUP)),
-                firefly_juice_ice = new ItemBase("firefly_juice_ice", new Item.Properties().group(FireflyMagic.GROUP)),
-                firefly_juice_void = new ItemBase("firefly_juice_void", new Item.Properties().group(FireflyMagic.GROUP)),
-                firefly_juice_earth = new ItemBase("firefly_juice_earth", new Item.Properties().group(FireflyMagic.GROUP)),
+                firefly_juice_fairy = new ItemFireflyJuice("firefly_juice_fairy"),
+                firefly_juice_forest = new ItemFireflyJuice("firefly_juice_forest"),
+                firefly_juice_mountain = new ItemFireflyJuice("firefly_juice_mountain"),
+                firefly_juice_demon = new ItemFireflyJuice("firefly_juice_demon"),
+                firefly_juice_ice = new ItemFireflyJuice("firefly_juice_ice"),
+                firefly_juice_void = new ItemFireflyJuice("firefly_juice_void"),
+                firefly_juice_earth = new ItemFireflyJuice("firefly_juice_earth"),
 
                 scroll_sage = new ItemScrollSage("scroll_sage")
         );

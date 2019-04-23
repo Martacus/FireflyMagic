@@ -7,6 +7,7 @@ import com.hrznstudio.titanium.block.BlockTileBase;
 import com.hrznstudio.titanium.block.tile.TileActive;
 import com.hrznstudio.titanium.block.tile.inventory.PosInvHandler;
 import com.mart.ffmagic.FireflyMagic;
+import com.mart.ffmagic.item.ItemFireflyJar;
 import com.mart.ffmagic.recipe.ModRecipes;
 import net.minecraft.block.Block;
 import net.minecraft.block.material.Material;
@@ -59,7 +60,8 @@ public class BlockFireflyPress extends BlockTileBase<BlockFireflyPress.TileFiref
 
         public TileFireflyPress() {
             super(BLOCK);
-            this.addInventory(first = new PosInvHandler("press_slot", 80, 40, 1).setTile(this).setInputFilter((stack, integer) -> IItemStackQuery.ANYTHING.test(stack)));
+            this.addInventory(first = new PosInvHandler("press_slot", 80, 40, 1).setTile(this)
+                    .setInputFilter((stack, integer) -> stack.getItem() instanceof ItemFireflyJar));
         }
 
         public void activate(){
