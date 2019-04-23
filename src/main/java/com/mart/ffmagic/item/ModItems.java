@@ -5,6 +5,7 @@ import com.hrznstudio.titanium.util.TitaniumMod;
 import com.mart.ffmagic.FireflyMagic;
 import com.mart.ffmagic.entity.EntityFirefly;
 import com.mart.ffmagic.item.scrolls.ItemFireflyJuice;
+import com.mart.ffmagic.item.scrolls.ItemScrollDruid;
 import com.mart.ffmagic.item.scrolls.ItemScrollSage;
 import net.minecraft.item.Item;
 
@@ -13,7 +14,7 @@ public class ModItems {
     public static Item firefly_jar, firefly_jar_forest, firefly_jar_fairy, firefly_jar_mountain, firefly_jar_demon, firefly_jar_ice, firefly_jar_void, firefly_jar_earth;
     public static Item firefly_juice_forest, firefly_juice_fairy, firefly_juice_mountain, firefly_juice_demon, firefly_juice_ice, firefly_juice_void, firefly_juice_earth;
     
-    public static Item scroll_sage;
+    public static Item scroll_sage, scroll_druid;
 
     public static void registerItems(TitaniumMod mod){
         mod.addItems(
@@ -34,7 +35,8 @@ public class ModItems {
                 firefly_juice_void = new ItemFireflyJuice("firefly_juice_void"),
                 firefly_juice_earth = new ItemFireflyJuice("firefly_juice_earth"),
 
-                scroll_sage = new ItemScrollSage("scroll_sage")
+                scroll_sage = new ItemScrollSage("scroll_sage"),
+                scroll_druid = new ItemScrollDruid("scroll_druid")
         );
     }
 
