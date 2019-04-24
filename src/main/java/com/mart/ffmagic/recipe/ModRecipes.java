@@ -22,6 +22,7 @@ public class ModRecipes {
         pressItems.put(ModItems.firefly_jar_void, ModItems.firefly_juice_void);
 
         scrollRecipes.put(ModItems.firefly_juice_fairy, ModItems.scroll_sage);
+        scrollRecipes.put(ModItems.firefly_juice_forest, ModItems.scroll_druid);
     }
 
     public static Item getPressOutput(Item input){
