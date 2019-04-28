@@ -13,6 +13,6 @@ public class ItemScrollSage extends ItemScroll {
     @Override
     protected void action(World world, EntityPlayer player, EnumHand hand) {
         player.giveExperiencePoints(getScrollLevel(player.getHeldItem(hand)) * 30);
-
+        super.action(world, player, hand);
     }
 }

@@ -46,5 +46,6 @@ public class ItemScrollDruid extends ItemScroll {
                 }
             }
         }
+        super.action(world, player, hand);
     }
 }

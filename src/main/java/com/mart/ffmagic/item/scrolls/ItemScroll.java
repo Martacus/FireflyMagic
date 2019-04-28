@@ -31,15 +31,17 @@ public class ItemScroll extends ItemBase {
 
         action(world, player, hand);
 
-        if(!player.abilities.isCreativeMode){
-            player.getHeldItem(hand).shrink(1);
-        }
-
         return super.onItemRightClick(world, player, hand);
     }
 
-    protected void action(World world, EntityPlayer player, EnumHand hand){
+    protected void removeScrol(EntityPlayer player, EnumHand hand){
+        if(!player.abilities.isCreativeMode){
+            player.getHeldItem(hand).shrink(1);
+        }
+    }
 
+    protected void action(World world, EntityPlayer player, EnumHand hand){
+        removeScrol(player, hand);
     }
 
     public static void setScrollLevel(ItemStack stack, int level){

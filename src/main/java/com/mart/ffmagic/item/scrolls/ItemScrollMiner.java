@@ -48,5 +48,7 @@ public class ItemScrollMiner extends ItemScroll {
 
             }
         }
+
+        super.action(world, player, hand);
     }
 }

@@ -24,6 +24,8 @@ public class ModRecipes {
         scrollRecipes.put(ModItems.firefly_juice_fairy, ModItems.scroll_sage);
         scrollRecipes.put(ModItems.firefly_juice_forest, ModItems.scroll_druid);
         scrollRecipes.put(ModItems.firefly_juice_earth, ModItems.scroll_miner);
+        scrollRecipes.put(ModItems.firefly_juice_mountain, ModItems.scroll_thunder);
+        scrollRecipes.put(ModItems.firefly_juice_demon, ModItems.scroll_demon);
     }
 
     public static Item getPressOutput(Item input){
