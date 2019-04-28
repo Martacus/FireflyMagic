@@ -10,10 +10,4 @@ public class PotionWisdomDraught extends Potion {
         super(false, 8171462);
         setRegistryName(FireflyMagic.MODID,"wisdom_draught");
     }
-
-    @Override
-    public void performEffect(EntityLivingBase entityLivingBaseIn, int amplifier) {
-        System.out.println("effect");
-        super.performEffect(entityLivingBaseIn, amplifier);
-    }
 }

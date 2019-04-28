@@ -6,7 +6,7 @@ import com.mart.ffmagic.block.ModBlocks;
 import com.mart.ffmagic.entity.EntityFirefly;
 import com.mart.ffmagic.item.ModItems;
 import com.mart.ffmagic.particle.ParticleFirefly;
-import com.mart.ffmagic.potion.PotionWisdomDraught;
+import com.mart.ffmagic.potion.*;
 import com.mart.ffmagic.recipe.ModRecipes;
 import net.minecraft.entity.EntityType;
 import net.minecraft.entity.player.EntityPlayer;
@@ -71,8 +71,12 @@ public class FireflyMagic extends TitaniumMod
     @EventReceiver
     public static void registerPotion(final RegistryEvent.Register<Potion> event)
     {
-        WISDOM_DRAUGHT = new PotionWisdomDraught();
-        event.getRegistry().register(WISDOM_DRAUGHT);
+        event.getRegistry().register(WISDOM_DRAUGHT = new PotionWisdomDraught());
+        event.getRegistry().register(LIQUID_LUCK = new PotionLiquidLuck());
+        event.getRegistry().register(MANDRAGORA = new PotionMandragora());
+        event.getRegistry().register(DRUIDS_DELIGHT = new PotionDruidsDelight());
+        event.getRegistry().register(DRAGONS_WRATH = new PotionDragonsWrath());
+        event.getRegistry().register(BLOODFURY_POTION = new PotionBloodfuryPotion());
     }
 
 
