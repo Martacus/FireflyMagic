@@ -10,7 +10,7 @@ public class ParticleFirefly extends ParticleBase {
 
     public ParticleFirefly(World world, double x, double y, double z, double vx, double vy, double vz, double[] data) {
         super(world, x, y, z, vx, vy, vz, data);
-
+        setSize(0.1f, 0.1f);
     }
 
     @Override
@@ -21,6 +21,5 @@ public class ParticleFirefly extends ParticleBase {
     @Override
     public void tick() {
         super.tick();
-        System.out.println("ticking");
     }
 }

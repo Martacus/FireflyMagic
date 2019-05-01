@@ -4,10 +4,13 @@ import com.hrznstudio.titanium.particle.ParticleRegistry;
 import com.hrznstudio.titanium.util.TitaniumMod;
 import com.mart.ffmagic.block.ModBlocks;
 import com.mart.ffmagic.entity.EntityFirefly;
+import com.mart.ffmagic.entity.RenderFirefly;
 import com.mart.ffmagic.item.ModItems;
 import com.mart.ffmagic.particle.ParticleFirefly;
 import com.mart.ffmagic.potion.*;
 import com.mart.ffmagic.recipe.ModRecipes;
+import net.minecraft.client.Minecraft;
+import net.minecraft.client.renderer.entity.RenderManager;
 import net.minecraft.entity.EntityType;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.init.Blocks;
@@ -21,6 +24,7 @@ import net.minecraftforge.api.distmarker.Dist;
 import net.minecraftforge.api.distmarker.OnlyIn;
 import net.minecraftforge.event.RegistryEvent;
 import net.minecraftforge.event.entity.player.PlayerPickupXpEvent;
+import net.minecraftforge.fml.client.registry.RenderingRegistry;
 import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.fml.common.registry.GameRegistry;
 import org.apache.logging.log4j.LogManager;
@@ -55,7 +59,7 @@ public class FireflyMagic extends TitaniumMod
         ModItems.registerItems(this);
         ModBlocks.registerBlocks(this);
         ModRecipes.addRecipes();
-        ParticleRegistry.registerParticle(ParticleFirefly.class, new ResourceLocation("ffmagic:particle/particle_glow"));
+        ParticleRegistry.registerParticle(ParticleFirefly.class, new ResourceLocation(MODID, "particle/particle_glow"));
 
     }
 
@@ -66,6 +70,8 @@ public class FireflyMagic extends TitaniumMod
         FIREFLY.setRegistryName(new ResourceLocation(MODID, "firefly"));
 
         event.getRegistry().register(FIREFLY);
+        RenderingRegistry.registerEntityRenderingHandler(EntityFirefly.class, RenderFirefly::new);
+        //Minecraft.getInstance().getRenderManager().entityRenderMap.put(EntityFirefly.class, new RenderFirefly( Minecraft.getInstance().getRenderManager()));
     }
 
     @EventReceiver
@@ -78,6 +84,8 @@ public class FireflyMagic extends TitaniumMod
         event.getRegistry().register(DRAGONS_WRATH = new PotionDragonsWrath());
         event.getRegistry().register(BLOODFURY_POTION = new PotionBloodfuryPotion());
     }
+
+
 
 
 }

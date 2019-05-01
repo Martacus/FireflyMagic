@@ -15,7 +15,7 @@ public class ModItems {
     public static Item scroll_sage, scroll_druid, scroll_miner, scroll_thunder, scroll_demon;
 
     public static void registerItems(TitaniumMod mod){
-        mod.addItems(
+        mod.addEntries(Item.class,
                 firefly_jar = new ItemBase("firefly_jar", new Item.Properties().group(FireflyMagic.GROUP)),
                 firefly_jar_fairy = new ItemFireflyJar("firefly_jar_fairy", EntityFirefly.FireflyType.FAIRY),
                 firefly_jar_forest = new ItemFireflyJar("firefly_jar_forest", EntityFirefly.FireflyType.FOREST),

@@ -33,6 +33,8 @@ public class EntityFirefly extends EntityFlying {
         this.moveHelper = new FireflyMoveHelper(this);
     }
 
+
+
     @Override
     protected void registerData() {
         super.registerData();
@@ -42,7 +44,7 @@ public class EntityFirefly extends EntityFlying {
 
     @Override
     public void tick() {
-        TitaniumClient.particleRenderer.spawnParticle(getEntityWorld(), "com.mart.ffmagic.particle.particlefirefly", getPosition().getX(), getPosition().getY(), getPosition().getZ(), 0, 0, 0, 1000);
+        TitaniumClient.particleRenderer.spawnParticle(getEntityWorld(), "com.mart.ffmagic.particle.particlefirefly", posX, posY, posZ, 0, 0, 0, 1);
         super.tick();
     }
 

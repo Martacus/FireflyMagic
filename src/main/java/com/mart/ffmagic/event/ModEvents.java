@@ -36,7 +36,7 @@ public class ModEvents {
             player.getActivePotionEffects().forEach(potionEffect -> {
                 if(potionEffect.getPotion() == FireflyMagic.MANDRAGORA){
                     if(random.nextInt(2) == 0){
-                        event.getEntityLiving().addPotionEffect(new PotionEffect(MobEffects.POISON, 100, 1));
+                        event.getEntityLiving().addPotionEffect(new PotionEffect(MobEffects.POISON, 100, 0));
                     }
                 }
             });
