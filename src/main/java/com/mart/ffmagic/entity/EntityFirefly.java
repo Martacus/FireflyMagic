@@ -3,6 +3,8 @@ package com.mart.ffmagic.entity;
 import com.hrznstudio.titanium.TitaniumClient;
 import com.mart.ffmagic.FireflyMagic;
 import com.mart.ffmagic.item.ModItems;
+import com.mart.ffmagic.util.ColorUtil;
+import com.mart.ffmagic.util.RgbColor;
 import net.minecraft.entity.EntityFlying;
 import net.minecraft.entity.ai.EntityAIBase;
 import net.minecraft.entity.ai.EntityMoveHelper;
@@ -44,7 +46,10 @@ public class EntityFirefly extends EntityFlying {
 
     @Override
     public void tick() {
-        TitaniumClient.particleRenderer.spawnParticle(getEntityWorld(), "com.mart.ffmagic.particle.particlefirefly", posX, posY, posZ, 0, 0, 0, 1);
+        FireflyType type = FireflyType.valueOf(getDataManager().get(TYPE));
+        RgbColor color = ColorUtil.fireflyColors.get(type);
+        TitaniumClient.particleRenderer.spawnParticle(getEntityWorld(), "com.mart.ffmagic.particle.particlefirefly",
+                posX, posY, posZ, 0, 0, 0, 1, color.getRed(), color.getGreen(), color.getBlue());
         super.tick();
     }
 

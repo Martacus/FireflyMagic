@@ -10,6 +10,7 @@ public class ParticleFirefly extends ParticleBase {
 
     public ParticleFirefly(World world, double x, double y, double z, double vx, double vy, double vz, double[] data) {
         super(world, x, y, z, vx, vy, vz, data);
+        setColor((float)data[1]/255f, (float)data[2]/255f, (float)data[3]/255f);
         setSize(0.1f, 0.1f);
     }
 
