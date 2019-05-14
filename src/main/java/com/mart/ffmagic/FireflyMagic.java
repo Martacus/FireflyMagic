@@ -73,7 +73,6 @@ public class FireflyMagic extends TitaniumMod
 
         event.getRegistry().register(FIREFLY);
         RenderingRegistry.registerEntityRenderingHandler(EntityFirefly.class, RenderFirefly::new);
-        //Minecraft.getInstance().getRenderManager().entityRenderMap.put(EntityFirefly.class, new RenderFirefly( Minecraft.getInstance().getRenderManager()));
     }
 
     @EventReceiver
