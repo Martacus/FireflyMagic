@@ -42,7 +42,7 @@ public class BlockScrollWriter extends BlockTileBase<BlockScrollWriter.TileScrol
     public static final BlockScrollWriter BLOCK = new BlockScrollWriter();
 
     public BlockScrollWriter() {
-        super("scroll_writer", Properties.create(Material.IRON), TileScrollWriter.class);
+        super("scroll_table", Properties.create(Material.IRON), TileScrollWriter.class);
     }
 
     @Override
