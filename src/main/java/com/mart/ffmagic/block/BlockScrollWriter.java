@@ -23,6 +23,7 @@ import net.minecraft.init.Items;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemBlock;
 import net.minecraft.item.ItemStack;
+import net.minecraft.util.BlockRenderLayer;
 import net.minecraft.util.EnumFacing;
 import net.minecraft.util.EnumHand;
 import net.minecraft.util.math.AxisAlignedBB;
@@ -64,6 +65,11 @@ public class BlockScrollWriter extends BlockTileBase<BlockScrollWriter.TileScrol
     @Override
     public IFactory<TileScrollWriter> getTileEntityFactory() {
         return TileScrollWriter::new;
+    }
+
+    @Override
+    public BlockRenderLayer getRenderLayer() {
+        return BlockRenderLayer.CUTOUT_MIPPED;
     }
 
     //TileEntity

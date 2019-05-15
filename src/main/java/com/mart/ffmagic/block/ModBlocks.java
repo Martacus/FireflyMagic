@@ -6,7 +6,7 @@ import net.minecraft.block.Block;
 public class ModBlocks {
 
     public static void registerBlocks(TitaniumMod mod){
-        mod.addEntries(Block.class, BlockFireflyPress.BLOCK, BlockScrollWriter.BLOCK);
+        mod.addEntries(Block.class, BlockFireflyPress.BLOCK, BlockScrollWriter.BLOCK, BlockCauldron.BLOCK);
     }
 
 }
