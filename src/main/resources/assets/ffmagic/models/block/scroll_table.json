@@ -5,7 +5,8 @@
 		"scroll_table_basket": "ffmagic:block/scroll_table_basket",
 		"scroll_table_side_alt": "ffmagic:block/scroll_table_side_alt",
 		"scroll_table_jar": "ffmagic:block/scroll_table_jar",
-		"scroll_table_side": "ffmagic:block/scroll_table_side"
+		"scroll_table_side": "ffmagic:block/scroll_table_side",
+		"particle": "ffmagic:block/scroll_table_top"
 	},
 	"elements": [
 		{

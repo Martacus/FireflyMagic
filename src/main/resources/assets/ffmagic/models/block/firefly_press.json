@@ -5,7 +5,8 @@
 		"press_parts_2": "ffmagic:block/press_parts_2",
 		"press_parts_1": "ffmagic:block/press_parts_1",
 		"press_bottom": "ffmagic:block/press_bottom",
-		"press_side": "ffmagic:block/press_side"
+		"press_side": "ffmagic:block/press_side",
+		"particle": "ffmagic:block/press_bottom"
 	},
 	"elements": [
 		{

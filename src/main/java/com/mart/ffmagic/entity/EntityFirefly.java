@@ -35,8 +35,6 @@ public class EntityFirefly extends EntityFlying {
         this.moveHelper = new FireflyMoveHelper(this);
     }
 
-
-
     @Override
     protected void registerData() {
         super.registerData();
@@ -52,6 +50,8 @@ public class EntityFirefly extends EntityFlying {
                 posX, posY, posZ, 0, 0, 0, 1, color.getRed(), color.getGreen(), color.getBlue());
         super.tick();
     }
+
+
 
     @Override
     @OnlyIn(Dist.CLIENT)

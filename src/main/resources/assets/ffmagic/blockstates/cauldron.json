@@ -1,12 +1,10 @@
 {
   "forge_marker": 1,
   "defaults": {
-    "model": "ffmagic:cauldron",
     "transform": "forge:default-block"
   },
   "variants": {
-    "": [
-      {}
-    ]
+    "on=false": { "model": "ffmagic:cauldron_off"},
+    "on=true": { "model": "ffmagic:cauldron_on"}
   }
 }

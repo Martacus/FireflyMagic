@@ -5,7 +5,7 @@ buildscript {
         mavenCentral()
     }
     dependencies {
-        classpath group: 'net.minecraftforge.gradle', name: 'ForgeGradle', version: '3.0.115', changing: true
+        classpath group: 'net.minecraftforge.gradle', name: 'ForgeGradle', version: '3.+', changing: true
     }
 }
 apply plugin: 'net.minecraftforge.gradle'
@@ -61,7 +61,7 @@ repositories {
 
 dependencies {
     minecraft 'net.minecraftforge:forge:1.13.2-25.0.147'
-    deobf 'com.hrznstudio:titanium:2.1.3'
+    compile fg.deobf('com.hrznstudio:titanium:2.1.8')
 }
 
 jar {

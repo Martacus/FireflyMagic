@@ -5,8 +5,10 @@ import net.minecraft.block.Block;
 
 public class ModBlocks {
 
+    public static Block CAULDRON;
+
     public static void registerBlocks(TitaniumMod mod){
-        mod.addEntries(Block.class, BlockFireflyPress.BLOCK, BlockScrollWriter.BLOCK, BlockCauldron.BLOCK);
+        mod.addEntries(Block.class, BlockFireflyPress.BLOCK, BlockScrollWriter.BLOCK, CAULDRON = new BlockCauldron());
     }
 
 }
