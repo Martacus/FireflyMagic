@@ -16,6 +16,7 @@ import java.util.Random;
 @Mod.EventBusSubscriber
 public class ModEvents {
 
+    //Wisdom Draught Potion
     @SubscribeEvent
     public static void onXPPickup(PlayerPickupXpEvent event)
     {
@@ -27,6 +28,7 @@ public class ModEvents {
         }
     }
 
+    //Mandraora Potion
     @SubscribeEvent
     public static void onPlayerAttack(LivingDamageEvent event){
         Random random = new Random();

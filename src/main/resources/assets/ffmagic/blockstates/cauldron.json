@@ -4,7 +4,9 @@
     "transform": "forge:default-block"
   },
   "variants": {
-    "on=false": { "model": "ffmagic:cauldron_off"},
-    "on=true": { "model": "ffmagic:cauldron_on"}
+    "on=false,water=false": { "model": "ffmagic:cauldron_off"},
+    "on=false,water=true": { "model": "ffmagic:cauldron_off_water"},
+    "on=true,water=false": { "model": "ffmagic:cauldron_on"},
+    "on=true,water=true": { "model": "ffmagic:cauldron_on_water"}
   }
 }
